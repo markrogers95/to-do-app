@@ -18,9 +18,10 @@ var toDoListSchema = new Schema({
         min: 1,
         max: 5,
         default: 3,
-    }, {
+    },
+ },{
         timestamps: true
-    }
+ }
 );
 
 const toDoItem = mongoose.model('toDoItem', toDoListSchema);
