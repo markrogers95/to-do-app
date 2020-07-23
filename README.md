@@ -1,2 +1,2 @@
-# twitter-clone
-A full-stack Twitter Clone with NodeJs, ExpressJs and MongoDB 
+# to-do-app
+A full-stack ToDo app with NodeJs, ExpressJs and MongoDB 
