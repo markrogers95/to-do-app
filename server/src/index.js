@@ -6,16 +6,17 @@ const helmet = require('helmet');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+const items = require('./api/items');
+const router = require('./api/items');
 
 if (env.error){
-    // throw env.error;
     console.log(env.error);
 }
 
 const app = express();
 const port = process.env.PORT || 1337;
 
-mongoose.connect('mongodb://127.0.0.1/users', {
+mongoose.connect('mongodb://127.0.0.1/toDo', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).catch(error => handleError(error));
@@ -34,6 +35,8 @@ app.get('/', (req, res) => {
         "message": "hello world !"
     });
 });
+
+app.use('/api/items', items);
 
 app.use((req, res, next) => {
     const error = new Error(`Not found - ${req.originalUrl}`);

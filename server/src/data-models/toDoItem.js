@@ -11,9 +11,8 @@ var toDoListSchema = new Schema({
     description: validationString,
     dueDate: {
         type: Date,
-        required: true,
     },
-    critical: {
+    priority: {
         type: Number,
         min: 1,
         max: 5,
