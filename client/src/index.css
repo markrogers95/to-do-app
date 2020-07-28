@@ -15,12 +15,14 @@ body {
   border-radius: 5px;
 }
 
-.list-body{
+.item-body{
   width: 60%;
   height: auto;
   margin-left: 20%;
   text-align: center;
   background-color: #0B0C10;
+  border-radius: 25px;
+  color: #66FCF1;
 }
 
 .title{
@@ -30,8 +32,12 @@ body {
   color: #66FCF1;
 }
 
-p{
-  font-size: 3rem;
+.list-title{
+  font-size: 2rem;
   padding: 10px;
-  color: #66FCF1;
+}
+
+.list-p{
+  font-size: 1.5rem;
+  padding-bottom: 10px;
 }
