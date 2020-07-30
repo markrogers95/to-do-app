@@ -38,6 +38,45 @@ body {
 }
 
 .list-p{
-  font-size: 1.5rem;
-  padding-bottom: 10px;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+
+.add-new{
+  width: 10%;
+  height: 50px;
+  margin-left: 45%;
+  text-align: center;
+  background-color: #0B0C10;
+  border-radius: 25px;
+  color: #66FCF1;
+  cursor: pointer;
+}
+
+.popup{
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  color: #66FCF1;
+  height: auto;
+  width: 50%;
+  background-color: black;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.entry-form{
+  width: 100%;
+  margin-left: 10%;
+}
+
+
+.entry-form label,
+.entry-form input, 
+.entry-form textarea, 
+.entry-form button{
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  display: block;
+  width: 80%;
 }
