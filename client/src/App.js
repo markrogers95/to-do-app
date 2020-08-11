@@ -44,7 +44,6 @@ const App = () =>{
           <button className = "list-p"
           onClick = {() => {
             deleteItem(entry._id);
-            console.log(entry._id);
             getItems();
           }}>Delete</button>
         </div>

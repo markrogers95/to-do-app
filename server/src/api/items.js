@@ -29,9 +29,8 @@ router.post('/', async (req, res, next) => {
 });
 
 router.get("/delete:id", async (req, res, next) => {
-    
-    const item = await toDoItem.findOneAndDelete({_id: req.body});
-    console.log(req.body);
+    console.log(req.body());    
+    const item = await toDoItem.find({_id: req.body});
 });
 
 module.exports = router;
