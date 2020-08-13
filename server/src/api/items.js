@@ -28,9 +28,19 @@ router.post('/', async (req, res, next) => {
     }
 });
 
-router.get("/delete:id", async (req, res, next) => {
-    console.log(req.body());    
-    const item = await toDoItem.find({_id: req.body});
+//router.get('/:id')
+
+router.delete('/:id', async (req, res, next) => {
+    try{
+        const { id } = req.params;
+        console.log(id);
+        await toDoItem.remove({ _id: id}); 
+        res.json({
+            message: 'Success',
+        });
+    }catch(error){
+        next(error);
+    }
 });
 
 module.exports = router;

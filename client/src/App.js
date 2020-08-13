@@ -14,6 +14,11 @@ const App = () =>{
     setListItem(listItem);
   }
 
+  const removeItem = async (entry) => {
+    await deleteItem(entry);
+    getItems();
+    }
+
   useEffect(() => {
     getItems();
     setFormState("");
@@ -43,8 +48,7 @@ const App = () =>{
           </p> : null}
           <button className = "list-p"
           onClick = {() => {
-            deleteItem(entry._id);
-            getItems();
+            removeItem(entry);
           }}>Delete</button>
         </div>
       ))}
